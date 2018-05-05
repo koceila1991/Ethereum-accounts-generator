@@ -1,0 +1,7 @@
+{
+   "dependencies": {
+      "ethereumjs-util": "4.5.0",
+      "fast-csv": "^2.4.1",
+      "web3": "0.17.0-alpha"
+   }
+}
