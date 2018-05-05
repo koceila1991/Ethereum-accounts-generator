@@ -1,2 +1,2 @@
 # Ethereum-accounts-generator
-generate addresse ethereum 
+generate address, PrivKey ethereum accounts and save it to csv file
