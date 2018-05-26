@@ -5,6 +5,18 @@
 var EthUtil = require("ethereumjs-util")
 var fs= require("fs")
 var csv = require("fast-csv")
+var Web3 = require('web3');
+
+if (typeof web3 !== 'undefined') {
+    web3 = new Web3(web3.currentProvider);
+    console.log ('31');
+} else {
+    // set the provider you want from Web3.providers
+    console.log ('41');
+    var web3 = new Web3();
+web3.setProvider(new web3.providers.HttpProvider('https://api.myetherapi.com/eth'))
+
+}
 
 
 
@@ -64,6 +76,15 @@ for (var i = 0; i < N; i++)
 
 console.log(Adres);
 
+
+for (var i = 0; i < N; i++)
+{
+
+var x= web3.fromWei(web3.eth.getBalance(`${Adres[i]}`));
+console.log('balance = '+ x.toNumber());
+
+
+}
 
 
 
